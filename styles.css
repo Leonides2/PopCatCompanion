@@ -1,0 +1,9 @@
+
+#popcat-popup {
+    position: fixed;
+    display: flex   ;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    z-index: 999999;
+}

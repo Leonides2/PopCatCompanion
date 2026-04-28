@@ -1,0 +1,42 @@
+{
+    "manifest_version": 3,
+    "name": "PopCatCompanion",
+    "version": "1.0",
+    "description": "Reactive popcat companion.",
+    "permissions": [
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "styles.css"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "assets/close_mouth.png",
+                "assets/open_mouth.png"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": {
+        "128": "icon.png"
+    },
+    "action": {
+        "default_title": "PopCat Companion"
+    }
+}
