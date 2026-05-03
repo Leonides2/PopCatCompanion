@@ -4,7 +4,10 @@
     "version": "1.0",
     "description": "Reactive popcat companion.",
     "permissions": [
-        "tabs"
+        "tabs",
+        "tabCapture",
+        "activeTab",
+        "offscreen"
     ],
     "content_scripts": [
         {
@@ -12,6 +15,8 @@
                 "<all_urls>"
             ],
             "js": [
+                "utils.js",
+                "contextMenu/contextMenu.js",
                 "content.js"
             ],
             "css": [
@@ -22,6 +27,8 @@
     "web_accessible_resources": [
         {
             "resources": [
+                "offscreen.html",
+                "offscreen.js",
                 "assets/close_mouth.png",
                 "assets/open_mouth.png"
             ],
